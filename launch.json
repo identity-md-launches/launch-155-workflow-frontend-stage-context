@@ -1,0 +1,26 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "NoopHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "beforeSwap",
+      "afterSwap"
+    ]
+  },
+  "token": {
+    "contract": "NoopToken",
+    "name": "Noop Hook Token",
+    "symbol": "NOOP",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "Sepolia no-op hook for the noop-hook swarm smoke test. NoopHook accepts only the PoolManager constructor argument. Its two callbacks require that manager, acknowledge swaps and return zero deltas; beforeSwap returns a zero fee override, preserving the pool's LP fee. All other permissions are false, including beforeInitialize and every return-delta permission. The factory opens the pool without hook initialization gating. Deployment must mine a hook address whose low 14 bits equal 0x00c0. NoopToken has a zero-argument constructor. Neither contract exposes ownership, upgradeability, fees, burns or allowlists. Pool fields select native Sepolia ETH (zero address), a static 0.3% LP fee, tick spacing 60 and sqrtPriceX96 = 2^96, encoding a 1:1 currency1/currency0 raw-unit ratio. These are smoke-test defaults for review because the approved workflow does not specify pool values; the fee, spacing and price match the local ERC-20-pair test fixtures. Local tests cover factory-shaped initialization and settled swaps, not a native-ETH fork rehearsal. ABI exports are docs/abi/NoopHook.json and docs/abi/NoopToken.json. This technical manifest does not set launch policy or authorize deployment. Independent review and subsequent source publication, attestation, admission, deployment and frontend publication belong to their assigned reviewers and services."
+}
