@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-09-25T06:43:47.829Z",
+  "sourceCommit": "04308f31e6c8e005196c787b13261e6a23c7122e",
+  "poolId": "0x31106d4ea6242c163a3ab63eb3961724510395e0c78ae936e38b05123670c4a6",
+  "attempts": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "blockNumber": "11777497",
+      "code": [
+        {
+          "name": "NoopToken",
+          "address": "0xadd625bfb7cdbc09ae817c4932d9072595113152",
+          "bytes": 1710
+        },
+        {
+          "name": "NoopHook",
+          "address": "0x5b1e7ab12936187e3e05054e15f398feb87f40c0",
+          "bytes": 1247
+        },
+        {
+          "name": "poolManager",
+          "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+          "bytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+          "bytes": 19540
+        },
+        {
+          "name": "quoter",
+          "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+          "bytes": 5820
+        },
+        {
+          "name": "stateView",
+          "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+          "bytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+          "bytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "bytes": 9152
+        }
+      ],
+      "supply": "1000000000000000000000000000",
+      "decimals": 18,
+      "manager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+      "permissions": {
+        "beforeInitialize": false,
+        "afterInitialize": false,
+        "beforeAddLiquidity": false,
+        "afterAddLiquidity": false,
+        "beforeRemoveLiquidity": false,
+        "afterRemoveLiquidity": false,
+        "beforeSwap": true,
+        "afterSwap": true,
+        "beforeDonate": false,
+        "afterDonate": false,
+        "beforeSwapReturnDelta": false,
+        "afterSwapReturnDelta": false,
+        "afterAddLiquidityReturnDelta": false,
+        "afterRemoveLiquidityReturnDelta": false
+      },
+      "slot0": [
+        "560227709747861399187319382274582",
+        177284,
+        0,
+        3000
+      ],
+      "liquidity": "0",
+      "result": "read-success"
+    }
+  ],
+  "broadcastTransactions": 0
+}

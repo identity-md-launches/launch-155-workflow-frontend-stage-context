@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-25T06:48:08.434Z",
+  "engine": {
+    "name": "axe-core",
+    "version": "4.13.0"
+  },
+  "url": "http://127.0.0.1:4173/ipfs/noop/",
+  "violations": [],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "autocomplete-valid",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "definition-list",
+    "dlitem",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label",
+    "link-in-text-block",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "select-name",
+    "summary-name"
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+    }
+  ]
+}

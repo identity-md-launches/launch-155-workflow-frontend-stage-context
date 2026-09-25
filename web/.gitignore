@@ -1,0 +1,11 @@
+# Explicit path budget: only web/.gitignore, under 1 KiB.
+node_modules/
+**/node_modules/
+.cache/
+**/.cache/
+.npm/
+**/.npm/
+test-results/
+playwright-report/
+public/
+*.tsbuildinfo

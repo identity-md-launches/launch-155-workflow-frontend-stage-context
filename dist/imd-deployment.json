@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "launchId": "c03586f4-42cb-46e3-a6a5-d39619a68a25",
+  "chainId": 11155111,
+  "sourceCommit": "04308f31e6c8e005196c787b13261e6a23c7122e",
+  "attestationHash": "dbacd05902e7d4b22f3f7199db6f12e81c5fb0757536d67a6bd05e1c14971827",
+  "contracts": [
+    {
+      "name": "NoopToken",
+      "address": "0xadd625bfb7cdbc09ae817c4932d9072595113152",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "abiPath": "abi/NoopToken.json"
+    },
+    {
+      "name": "NoopHook",
+      "address": "0x5b1e7ab12936187e3e05054e15f398feb87f40c0",
+      "abiHash": "d320dbd632c7d41b49b3a49cc0a8fab95742761dfafaecc0412f1a74f4a17004",
+      "abiPath": "abi/NoopHook.json"
+    }
+  ],
+  "assets": [
+    {
+      "path": "abi/NoopHook.json",
+      "sha256": "dc3a823d428cdc8875bd1984679dae18ed2ba8766a493dfab810ff1916110d20"
+    },
+    {
+      "path": "abi/NoopToken.json",
+      "sha256": "9578fcb499b4ba5fac51462a67a2654d9f803e0ea3af9bdb19130ff695808542"
+    },
+    {
+      "path": "assets/ccip-DOAA2-47.js",
+      "sha256": "cab115b1c2a5781d75e43d04e831ba7e6e4dc9fbcc21c7024ebb4fd6e97dfcda"
+    },
+    {
+      "path": "assets/index-BEdH2UDp.css",
+      "sha256": "efa5a32f491939b373d24d74269859828543d23c4e7319c570fa26b6fe934c95"
+    },
+    {
+      "path": "assets/index-Ch-qxnGt.js",
+      "sha256": "9113cea1e57e1e6739def67c527ccd6cf43f8e88fd018255a9dade28c45f64d4"
+    },
+    {
+      "path": "index.html",
+      "sha256": "dc402ac4ba5588c1e791281ac0b70f74a0d6e0db4a50d2ee0aecfb37ce68ea3d"
+    }
+  ],
+  "network": {
+    "chainId": 11155111,
+    "name": "Sepolia",
+    "testnet": true,
+    "rpcUrls": [
+      "https://ethereum-sepolia-rpc.publicnode.com",
+      "https://rpc.sepolia.ethpandaops.io",
+      "https://sepolia.rpc.sentio.xyz"
+    ],
+    "explorer": "https://sepolia.etherscan.io",
+    "nativeCurrency": {
+      "name": "Sepolia Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "faucets": [
+      "https://cloud.google.com/application/web3/faucet/ethereum/sepolia",
+      "https://www.alchemy.com/faucets/ethereum-sepolia"
+    ],
+    "uniswapV4": {
+      "poolManager": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "universalRouter": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+      "quoter": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+      "stateView": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+      "positionManager": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    }
+  },
+  "walletAddChain": {
+    "chainId": "0xaa36a7",
+    "chainName": "Sepolia",
+    "rpcUrls": [
+      "https://ethereum-sepolia-rpc.publicnode.com",
+      "https://rpc.sepolia.ethpandaops.io",
+      "https://sepolia.rpc.sentio.xyz"
+    ],
+    "nativeCurrency": {
+      "name": "Sepolia Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "blockExplorerUrls": [
+      "https://sepolia.etherscan.io"
+    ]
+  },
+  "manifest": {
+    "hook": {
+      "contract": "NoopHook",
+      "permissions": [
+        "beforeSwap",
+        "afterSwap"
+      ],
+      "constructorArgs": [
+        "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Sepolia no-op hook for the noop-hook swarm smoke test. NoopHook accepts only the PoolManager constructor argument. Its two callbacks require that manager, acknowledge swaps and return zero deltas; beforeSwap returns a zero fee override, preserving the pool's LP fee. All other permissions are false, including beforeInitialize and every return-delta permission. The factory opens the pool without hook initialization gating. Deployment must mine a hook address whose low 14 bits equal 0x00c0. NoopToken has a zero-argument constructor. Neither contract exposes ownership, upgradeability, fees, burns or allowlists. Pool fields select native Sepolia ETH (zero address), a static 0.3% LP fee, tick spacing 60 and sqrtPriceX96 = 2^96, encoding a 1:1 currency1/currency0 raw-unit ratio. These are smoke-test defaults for review because the approved workflow does not specify pool values; the fee, spacing and price match the local ERC-20-pair test fixtures. Local tests cover factory-shaped initialization and settled swaps, not a native-ETH fork rehearsal. ABI exports are docs/abi/NoopHook.json and docs/abi/NoopToken.json. This technical manifest does not set launch policy or authorize deployment. Independent review and subsequent source publication, attestation, admission, deployment and frontend publication belong to their assigned reviewers and services.",
+    "token": {
+      "name": "Noop Hook Token",
+      "symbol": "NOOP",
+      "contract": "NoopToken",
+      "decimals": 18
+    }
+  }
+}

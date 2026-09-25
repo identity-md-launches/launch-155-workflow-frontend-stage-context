@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-25T06:48:09.393Z",
+  "url": "http://127.0.0.1:4173/ipfs/noop/",
+  "walletConnected": false,
+  "errors": [],
+  "failedResources": [],
+  "result": "Deployment verified\nBlock 11,777,518",
+  "liveState": "ONCHAIN OBSERVABILITY\n\nSmall Hook. Clear State.\nRefresh ↻\nDeployment verified\nBlock 11,777,518\nTotal Supply\n1,000,000,000 NOOP\nHook Delta\n0 by design\nPool Status\nNo active liquidity\nActive Liquidity\n0E0\n\nSWAP CALLBACKS\n\nbeforeSwap\n✓ Enabled\nafterSwap\n✓ Enabled\n\nBoth callbacks acknowledge the PoolManager and return zero deltas. The factory opens the pool; the hook does not gate initialization.\n\nTick 177,284 · Live LP fee 0.3% · 18 token decimals · Updated 6:48:00 AM. Reads refresh every 30 seconds.",
+  "swapDisabled": true,
+  "overflow": false
+}
